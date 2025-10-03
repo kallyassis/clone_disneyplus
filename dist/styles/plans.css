@@ -9,6 +9,15 @@
   justify-content: space-around;
   margin-top: 50px;
 }
+@media (max-width: 768px) {
+  .plans__list {
+    display: block;
+    justify-content: center;
+  }
+}
+.plans__list .button {
+  margin-top: 24px;
+}
 .plans__list__item {
   text-align: center;
   padding: 60px 44px 44px;
