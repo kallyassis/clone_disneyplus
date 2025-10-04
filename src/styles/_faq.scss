@@ -1,3 +1,5 @@
+@use 'variaveis.scss';
+
 .faq{
     padding: 5.6vw;
 
@@ -45,8 +47,13 @@
 
                 .faq__questions__item__answer{
                     height: auto;
-                    padding-bottom: 24px;
+                    padding: 24px;
+    
                     transition: height, .5s ease;
+
+                    a{
+                        color: variaveis.$corTextoSec;
+                    }
                 }
             }
         }

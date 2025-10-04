@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function () {
         const posicaoAtual = window.scrollY;
 
-        if (posicaoAtual < altura ) {
+        if (posicaoAtual < altura) {
             ocultaElementosDoHeader();
         }else{
             exibeElementoDoHeader();
         }
-    })
+    });
 
     //Seção de atracões, programação de abas
     for (let i = 0;  i < buttons.length; i++) {
@@ -37,13 +37,13 @@ function ocultaElementosDoHeader() {
     const header = document.querySelector('header');
 
     header.classList.add('header--is-hidden');
-}
+};
 
 function exibeElementoDoHeader() {
     const header = document.querySelector('header');
 
     header.classList.remove('header--is-hidden');
-}
+};
 
 
 function abreOuFechaResposta(elemento) {
@@ -51,7 +51,7 @@ function abreOuFechaResposta(elemento) {
     const elementoPai = elemento.target.parentNode;
 
     elementoPai.classList.toggle(classe);
-}
+};
 
 function removeBotaoAtivo(){
     const buttons = document.querySelectorAll('[data-tab-button]');
@@ -59,7 +59,7 @@ function removeBotaoAtivo(){
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].classList.remove('shows__tabs__button--is-active');
     };
-}
+};
 
 function escondeTodasAbas() {
     const tabsContainer = document.querySelectorAll('[data-tab-id]');

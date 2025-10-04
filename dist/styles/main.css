@@ -2,17 +2,20 @@
   padding: 5.6vw;
   min-height: 80vh;
   width: 100%;
-  background-image: url(../images/hero_desktop.jpeg);
+  background-image: url(../images/hero_desktop.webp);
   background-size: cover;
+  background-origin: content-box;
+  background-repeat: no-repeat;
   text-align: center;
+  margin-top: -160px;
 }
 @media (max-width: 768px) {
   .hero {
-    background-image: url(../images/hero_celular.jpeg);
+    background-image: url(../images/hero_mobile.webp);
     background-size: contain;
+    background-origin: padding-box;
     background-repeat: no-repeat;
     padding-top: calc(50vw + 25px);
-    margin-top: -55px;
   }
 }
 .hero .button {
@@ -25,7 +28,7 @@
 }
 .hero__content__branding {
   max-width: 320px;
-  margin: 0 auto 38px;
+  margin: 50px auto 38px;
 }
 @media (max-width: 768px) {
   .hero__content__branding {
@@ -81,8 +84,11 @@
 .shows__list--is-active {
   display: grid;
 }
-.shows__list__item img {
+.shows__list__item {
   max-width: 100%;
+}
+.shows__list__item img {
+  width: 100%;
   border-radius: 4px;
 }
 .shows__tabs {
@@ -228,8 +234,11 @@
 }
 .faq__questions__item--is-open .faq__questions__item__answer {
   height: auto;
-  padding-bottom: 24px;
+  padding: 24px;
   transition: height, 0.5s ease;
+}
+.faq__questions__item--is-open .faq__questions__item__answer a {
+  color: #f9f9f9;
 }
 
 .footer {
